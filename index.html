@@ -3,6 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles/base.css" />
     <link rel="stylesheet" href="styles/variables.css" />
     <link rel="stylesheet" href="styles/layout.css" />
@@ -10,6 +16,200 @@
     <title>Document</title>
   </head>
   <body>
-    Main Home
+    <div class="app__container flex__col container">
+      <header class="app__header flex__row">
+        <div class="header__container">
+          <div class="btn__back">
+            <button class="btn__secondary-sm">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-chevron-left preview-icon"
+              >
+                <path d="m15 18-6-6 6-6" />
+              </svg>
+            </button>
+          </div>
+          <div class="quiz__category flex__1">
+            <h5 class="heading__sm">Science & Technology Quiz</h5>
+          </div>
+        </div>
+      </header>
+      <div class="app__body flex__1">
+        <div class="app__body--inner">
+          <div class="grid__13">
+            <main class="col__span--9">
+              <div class="container">
+                <!-- Loader container -->
+                <div class="flex__col container">
+                  <div class=""></div>
+                  <div class="flex__1 flex__row justify__center">
+                    <div class="loader-wrapper">
+                      <div class="loader-bar-bounce">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                      </div>
+                      <p>Loading Questions...</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Quiz container -->
+                <div class="flex__col container hidden">
+                  <!-- Quiz Progress -->
+                  <div class="flex__col w-full">
+                    <div class="flex__row justify__between text__sm">
+                      <p id="question-count" class="muted__text font__sb">
+                        Question 1 of 10
+                      </p>
+                      <p id="progress-percentage" class="font__sb">
+                        100% Complete
+                      </p>
+                    </div>
+                    <div class="progress__bar">
+                      <span
+                        id="progress-bar"
+                        class="thumb"
+                        style="width: 40%"
+                      ></span>
+                    </div>
+                  </div>
+
+                  <!-- Quiz Question and Options -->
+                  <div class="flex__col w-full m__top">
+                    <!-- Questions -->
+                    <div class="flex__col w-full card">
+                      <div class="flex__row justify__between">
+                        <span id="points" class="pill pill__primary"
+                          >100 Points</span
+                        >
+                        <div class="timer__container">
+                          <span class="timer__icon">
+                            <img src="./assets/icons/timer.svg" alt="" />
+                          </span>
+                          <span id="timer" class="timer">00:00</span>
+                        </div>
+                        <span id="dificulty-level" class="pill pill__default"
+                          >Medium</span
+                        >
+                      </div>
+                      <div id="question-container" class="m__top">
+                        <h3 class="heading__md">
+                          Which of the following energy cannot be replenished
+                          naturally on a human timescale making it an example of
+                          a non-renewable energy?
+                        </h3>
+                      </div>
+                    </div>
+
+                    <!-- Options -->
+                    <div id="options-container" class="grid__8 m__top">
+                      <button class="col__span--4 card option__card">
+                        <div class="flex__row">
+                          <span class="option__num">A</span>
+                          <p class="option">Solar Power</p>
+                        </div>
+                      </button>
+                      <button class="col__span--4 card option__card">
+                        <div class="flex__row">
+                          <span class="option__num">B</span>
+                          <p class="option">Wind Power</p>
+                        </div>
+                      </button>
+                      <button class="col__span--4 card option__card">
+                        <div class="flex__row">
+                          <span class="option__num">C</span>
+                          <p class="option">Natural Gas</p>
+                        </div>
+                      </button>
+                      <button class="col__span--4 card option__card">
+                        <div class="flex__row">
+                          <span class="option__num">D</span>
+                          <p class="option">Hydroelectric Power</p>
+                        </div>
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- Quiz Next and Skip Buttons -->
+                  <div class="flex__row justify__between m__top">
+                    <button id="skip-btn" class="btn btn__secondary">
+                      <span class="btn-icon"
+                        ><img src="./assets/icons/flag.svg" alt=""
+                      /></span>
+                      <span>Skip</span>
+                    </button>
+                    <button id="next-btn" class="btn btn__primary">
+                      <span>Next Question</span>
+                      <span class="btn-icon">
+                        <img src="./assets/icons/chevron-right.svg" alt="" />
+                      </span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </main>
+
+            <!-- Quiz Stats Sidebar -->
+            <aside class="col__span--4">
+              <div class="container">
+                <div class="flex__col fit__height card">
+                  <h3 class="heading__lg">Quiz Stats</h3>
+                  <ul id="stats-container" class="flex__col w-full">
+                    <li class="quiz__stat_item">
+                      <span class="text__sm muted__text">Score</span>
+                      <span id="score-display" class="accent__text heading__sm"
+                        >0</span
+                      >
+                    </li>
+                    <li class="quiz__stat_item">
+                      <span class="text__sm muted__text">Lives</span>
+                      <div
+                        id="live-count"
+                        class="flex__row justify__center gap-xs"
+                      >
+                        <span
+                          ><img src="./assets/icons/heart.svg" alt=""
+                        /></span>
+                        <span
+                          ><img src="./assets/icons/heart.svg" alt=""
+                        /></span>
+                        <span
+                          ><img src="./assets/icons/heart.svg" alt=""
+                        /></span>
+                      </div>
+                    </li>
+                    <li class="quiz__stat_item hidden">
+                      <span class="text__sm muted__text">Progress</span>
+                      <span id="progress-display" class="heading__sm"
+                        >1/10</span
+                      >
+                    </li>
+                    <li class="quiz__stat_item hidden">
+                      <span class="text__sm muted__text">Position</span>
+                      <span
+                        id="leaderboard-position"
+                        class="accent__text heading__sm"
+                        >2nd</span
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="/src/app.js"></script>
   </body>
 </html>

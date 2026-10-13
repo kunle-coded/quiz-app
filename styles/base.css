@@ -1,0 +1,69 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: "Geist", Arial, Helvetica, sans-serif;
+  line-height: 1.3;
+  background-color: var(--bg-app);
+  color: var(--text-main);
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  appearance: none;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+/* Heading large - h3 */
+.heading__lg {
+  font-size: 20px;
+  line-height: 1.3;
+  font-weight: 600;
+}
+
+/* Heading small – h5 */
+.heading__md {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.heading__sm {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* Text small */
+.text__sm {
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.font__sb {
+  font-weight: 600;
+}
+
+.muted__text {
+  color: var(--text-muted);
+}
+
+.accent__text {
+  color: var(--accent-primary);
+}

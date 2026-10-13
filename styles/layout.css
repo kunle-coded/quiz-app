@@ -1,0 +1,131 @@
+.app__container {
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Flex Layout */
+.flex__col {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.flex__row {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+
+.flex__1 {
+  flex: 1;
+}
+
+.hidden {
+  display: none;
+}
+
+.justify__between {
+  justify-content: space-between;
+}
+
+.justify__center {
+  justify-content: center;
+}
+
+.gap-xs {
+  gap: 0.2rem;
+}
+
+.app__header {
+  /* margin: 0 var(--global-x-margin); */
+  border-width: 0 0 1px 0;
+  border-style: solid;
+  border-color: var(--border-color);
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 0 var(--global-x-margin);
+  padding: 1rem 0;
+}
+
+.btn__back {
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.quiz__category {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Main content area */
+
+.app__body {
+  width: 100%;
+}
+
+.app__body--inner {
+  height: 100%;
+  padding: var(--global-x-margin);
+}
+
+.content__wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+/* ########################################### */
+/* Grid Layout */
+
+.grid__8 {
+  display: grid;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  gap: 1rem; /* NOTE Decide on gap value */
+  width: 100%;
+  /* height: 100%; */
+}
+
+.grid__13 {
+  display: grid;
+  grid-template-columns: repeat(13, minmax(0, 1fr));
+  gap: 3rem; /* NOTE Decide on gap value */
+  width: 100%;
+  height: 100%;
+}
+
+.col__span--9 {
+  grid-column: span 9;
+}
+.col__span--4 {
+  grid-column: span 4;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.fit__height {
+  height: fit-content;
+}
+
+.m__top {
+  margin-top: var(--margin-top);
+}
+
+/* Progress */
+.bg {
+  background-color: cadetblue;
+}

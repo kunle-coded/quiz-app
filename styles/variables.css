@@ -1,0 +1,31 @@
+:root {
+  /* Base Colors */
+  --bg-app: #121212; /* Main background */
+  --bg-card: #1e1e24;
+  --bg-card-hover: #2a2a32;
+
+  /* Primary Accent */
+  --accent-primary: #7c3aed;
+  --accent-hover: #6d28d9;
+  --accent-light: #a78bfa;
+
+  /* Text Colors */
+  --text-main: #f3f4f6;
+  --text-muted: #9ca3af;
+
+  /* Status Colors */
+  --status-success: #10b981;
+  --status-error: #ef4444;
+
+  /* Borders & Shadows */
+  --border-color: #2d2d39;
+  --border-color-hover: #4d4d54;
+  --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+
+  /* Margins & Paddings */
+  --global-x-margin: 90px;
+  --margin-top: 1.5rem;
+
+  /* Radius */
+  --rounded-lg: 12px;
+}

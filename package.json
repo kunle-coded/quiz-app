@@ -4,9 +4,10 @@
   "description": "An interactive quiz app",
   "license": "MIT",
   "author": "Kunle Adesokan",
-  "type": "commonjs",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
-  }
+  },
+  "dependencies": {}
 }
